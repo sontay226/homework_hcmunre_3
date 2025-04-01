@@ -29,11 +29,13 @@ public class TamGiac extends AbstractClass{
     }
     @Override
     public double ChuVi() {
+        if ( !check() ) return -1;
         return c1 + c2 + c3;
     }
 
     @Override
     public double DienTich() {
+        if ( !check() ) return -1;
         double p = ChuVi();
         return Math.sqrt( p * ( p - c1 ) * ( p - c2) * ( p - c3));
     }
@@ -43,6 +45,6 @@ public class TamGiac extends AbstractClass{
         System.out.println("Dien tich : " + DienTich());
     }
     public boolean check () {
-        return c1 + c2 > c3 && c1 + c3 > c2 && c2 + c3 > c1;
+        return c1 + c2 > c3 && c1 + c3 > c2 && c2 + c3 > c1 && c1 > 0 && c2 > 0 && c3 > 0;
     }
 }

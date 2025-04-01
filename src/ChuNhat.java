@@ -32,10 +32,12 @@ public class ChuNhat extends AbstractClass {
 
     @Override
     public double ChuVi() {
+        if ( !check() )return -1;
         return (c1 + c2)*2;
     }
     @Override
     public double DienTich () {
+        if ( !check()) return -1;
         return c1 * c2;
     }
     @Override

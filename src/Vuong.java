@@ -21,11 +21,13 @@ public class Vuong extends AbstractClass {
 
     @Override
     public double ChuVi() {
+        if ( !check() ) return -1;
         return c*4;
     }
 
     @Override
     public double DienTich() {
+        if ( !check() ) return -1;
         return c*c;
     }
     @Override

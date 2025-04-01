@@ -21,11 +21,13 @@ public class Tron extends AbstractClass{
 
     @Override
     public double ChuVi() {
+        if ( !check() ) return -1;
         return  2*Math.PI*r;
     }
 
     @Override
     public double DienTich() {
+        if ( !check() ) return -1;
         return Math.PI*r*r;
     }
     @Override
